@@ -98,6 +98,7 @@ a, a:visited {
     border-radius: 24px;
 }
 
+
 .QuizHeaderText {
     color: #2f2f2f;
     font-weight: 500;
@@ -173,5 +174,38 @@ Button:active {
 @media (max-width: 680px) {
     canvas {
         transform: scale(0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .QuizHeaderText {
+        color: #2f2f2f;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .QuizContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px;
+        box-shadow: 0 0 10px 2px rgb(100 100 100 / 10%);
+        font-size: 16px;
+        border-radius: 16px;
+    }
+    ul input {
+        transform: scale(1.0);
+    }
+
+    Button {
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 16px;
+        background-color: #A14EBF;
+        color: #FFFFFF;
+    }
+    .answer {
+        margin-right: 4px;
     }
 }
