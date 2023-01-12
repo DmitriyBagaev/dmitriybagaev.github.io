@@ -170,12 +170,6 @@ Button:active {
     justify-content: center;
 }
 
-/*@media (min-width: 1000px) {*/
-/*    canvas {*/
-/*        transform: scale(1.25);*/
-/*    }*/
-/*}*/
-
 @media (max-width: 680px) {
     canvas {
         transform: scale(0.5);
