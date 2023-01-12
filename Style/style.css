@@ -1,0 +1,183 @@
+* {
+    margin:0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 8em;
+    }
+}
+
+.Links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+.MainPageLink {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+
+.MainPageLink:hover {
+    background-color: #FAFAFA;
+    border-radius: 24px;
+}
+.MainPageLink:active {
+    background-color: #F1F1F1;
+}
+
+a, a:visited {
+    color: #2f2f2f;
+    text-decoration: none;
+    font-size: 48px;
+    padding: 48px;
+}
+
+.Name {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: #B8B8B8;
+    padding: 32px;
+}
+
+.BackButton {
+
+    display: flex;
+    justify-content: center;
+}
+
+.BackButton:hover {
+    background-color: #FAFAFA;
+    border-radius: 24px;
+}
+.BackButton:active {
+    background-color: #F1F1F1;
+}
+
+.BackButton a {
+    font-size: 24px;
+    padding: 32px;
+}
+
+
+.QuizContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 48px;
+    box-shadow: 0 0 10px 2px rgb(100 100 100 / 10%);
+    font-size: 24px;
+    border-radius: 24px;
+}
+
+.QuizHeaderText {
+    color: #2f2f2f;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul input {
+    transform: scale(1.5);
+}
+
+
+input {
+    accent-color: #A14EBF;
+}
+
+label {
+    display: block;
+    padding: 24px 24px;
+}
+label:hover {
+    background-color: #FAFAFA;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.answer {
+    margin-right: 8px;
+}
+
+Button {
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    border-radius: 24px;
+    background-color: #A14EBF;
+    color: #FFFFFF;
+}
+Button:hover {
+    background-color: #8c3da9;
+}
+Button:active {
+    background-color: #7c3696;
+}
+
+.InputField {
+    padding: 16px 16px;
+    font-size: 24px;
+    outline: 1px solid #ecdcf2;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    border: none;
+
+}
+.InputField:hover {
+    outline: 1px solid #8c3da9;
+    border: none;
+}
+
+.InputField:focus-visible {
+    outline: 2px solid #A14EBF;
+    border: none;
+}
+
+.gameWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1000px) {
+    canvas {
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width: 680px) {
+    canvas {
+        transform: scale(0.5);
+    }
+}

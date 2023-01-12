@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div class="Container">
+    <div class="BackButton">
+        <a href="../index.html">В меню</a>
+    </div>
+
+    <div class="QuizContainer">
+        <div class="QuizHeader" id="header">
+            <h2 class="QuizHeaderText">Вопрос</h2>
+
+            <h2 class="QuizHeaderText">%title%</h2>
+            <h2 class="QuizHeaderText">%message%</h2>
+            <h2 class="QuizHeaderText">%result%</h2>
+        </div>
+
+        <ul class="QuizListRadio" id="list">
+            <li>
+                <label>
+                    <input type="radio" class="answer" name="answer">
+                    <span>Ответ</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" class="answer" name="answer">
+                    <span>Ответ</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" class="answer" name="answer">
+                    <span>Ответ</span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" class="answer" name="answer">
+                    <span>Ответ</span>
+                </label>
+            </li>
+        </ul>
+
+<!--        <ul class="QuizListCheckboxes">-->
+<!--            <li>-->
+<!--                <label>-->
+<!--                    <input type="checkbox" class="answer" name="answer">-->
+<!--                    <span>Ответ</span>-->
+<!--                </label>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <label>-->
+<!--                    <input type="checkbox" class="answer" name="answer">-->
+<!--                    <span>Ответ</span>-->
+<!--                </label>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <label>-->
+<!--                    <input type="checkbox" class="answer" name="answer">-->
+<!--                    <span>Ответ</span>-->
+<!--                </label>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <label>-->
+<!--                    <input type="checkbox" class="answer" name="answer">-->
+<!--                    <span>Ответ</span>-->
+<!--                </label>-->
+<!--            </li>-->
+<!--        </ul>-->
+
+<!--        <select class="InputField">-->
+<!--            <option value="">&nbsp</option>-->
+<!--            <option value="1">1</option>-->
+<!--            <option value="2">2</option>-->
+<!--            <option value="3">3</option>-->
+<!--            <option value="4">4</option>-->
+<!--        </select>-->
+
+<!--        <input class="InputField" type="number" class="answer" name="answer" placeholder="Ваш ответ">-->
+
+<!--        <input class="InputField" type="text" class="answer" name="answer" placeholder="Ваш ответ">-->
+
+        <button id="submit">Ответить</button>
+    </div>
+    <script src="../JS/quiz.js"></script>
+    <div class="Name">
+        Багаев Дмитрий, 223-ZИС
+    </div>
+</div>
+</body>
+</html>
