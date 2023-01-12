@@ -172,7 +172,7 @@ Button:active {
 
 @media (min-width: 1000px) {
     canvas {
-        transform: scale(1.5);
+        transform: scale(1.25);
     }
 }
 

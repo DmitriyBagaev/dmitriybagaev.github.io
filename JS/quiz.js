@@ -124,13 +124,13 @@ function showResults(){
     }
 }
 
-function shuffle(questions) {
-    let j, temp;
-    for (let i = questions.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        temp = questions[j];
-        questions[j] = questions[i];
-        questions[i] = temp;
-    }
-    return questions;
-}
+// function shuffle(questions) {
+//     let j, temp;
+//     for (let i = questions.length - 1; i > 0; i--) {
+//         j = Math.floor(Math.random() * (i + 1));
+//         temp = questions[j];
+//         questions[j] = questions[i];
+//         questions[i] = temp;
+//     }
+//     return questions;
+// }
