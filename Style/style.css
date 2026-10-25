@@ -168,12 +168,92 @@ Button:active {
 
 .gameWrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
 }
 
-@media (max-width: 680px) {
-    canvas {
-        transform: scale(0.5);
+.GameHud {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+.GameHint {
+    font-size: 16px;
+    color: #B8B8B8;
+}
+
+/* Поле сжимается под ширину экрана, внутреннее разрешение остаётся 600×600 */
+canvas {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Кнопки управления видны только на сенсорных экранах */
+.TouchControls {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+}
+
+.TouchGroup {
+    display: flex;
+    gap: 16px;
+}
+
+.TouchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.TouchButton svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.TouchButton.pressed {
+    background-color: #7c3696;
+}
+
+@media (pointer: coarse) {
+    .TouchControls {
+        display: flex;
+    }
+
+    .GameHint {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .GameHud {
+        flex-wrap: wrap;
+        row-gap: 4px;
+        font-size: 14px;
+    }
+
+    .GameHudLevel {
+        width: 100%;
     }
 }
 

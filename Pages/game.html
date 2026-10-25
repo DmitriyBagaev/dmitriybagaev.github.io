@@ -15,7 +15,26 @@
         <a href="../index.html">В меню</a>
     </div>
     <div class="gameWrapper">
+        <div class="GameHud">
+            <span class="GameHudLevel" id="hudLevel"></span>
+            <span id="hudDeaths"></span>
+            <span id="hudTime"></span>
+        </div>
         <canvas id="game" width="600" height="600"></canvas>
+        <div class="GameHint">← → — бег, ↑ или пробел — прыжок, R — начать уровень заново</div>
+        <div class="TouchControls">
+            <div class="TouchGroup">
+                <button class="TouchButton" data-key="ArrowLeft" aria-label="Влево">
+                    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+                </button>
+                <button class="TouchButton" data-key="ArrowRight" aria-label="Вправо">
+                    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+            <button class="TouchButton" data-key="ArrowUp" aria-label="Прыжок">
+                <svg viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+            </button>
+        </div>
         <script src="../JS/game.js"></script>
     </div>
     <div class="Name">
