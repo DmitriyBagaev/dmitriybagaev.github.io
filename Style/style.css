@@ -187,9 +187,73 @@ Button:active {
     color: #B8B8B8;
 }
 
-@media (max-width: 680px) {
-    canvas {
-        transform: scale(0.5);
+/* Поле сжимается под ширину экрана, внутреннее разрешение остаётся 600×600 */
+canvas {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Кнопки управления видны только на сенсорных экранах */
+.TouchControls {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+}
+
+.TouchGroup {
+    display: flex;
+    gap: 16px;
+}
+
+.TouchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.TouchButton svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.TouchButton.pressed {
+    background-color: #7c3696;
+}
+
+@media (pointer: coarse) {
+    .TouchControls {
+        display: flex;
+    }
+
+    .GameHint {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .GameHud {
+        flex-wrap: wrap;
+        row-gap: 4px;
+        font-size: 14px;
+    }
+
+    .GameHudLevel {
+        width: 100%;
     }
 }
 

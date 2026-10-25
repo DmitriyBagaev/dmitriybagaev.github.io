@@ -239,6 +239,27 @@ function pressed(codes) {
     return codes.some(function(code) { return keys[code] }) ? 1 : 0
 }
 
+// Кнопки для телефона: зажатая кнопка работает как зажатая клавиша
+function bindTouchButton(button) {
+    let code = button.dataset.key
+    function release() {
+        keys[code] = false
+        button.classList.remove('pressed')
+    }
+    button.addEventListener('pointerdown', function(e) {
+        e.preventDefault()
+        keys[code] = true
+        button.classList.add('pressed')
+    })
+    button.addEventListener('pointerup', release)
+    button.addEventListener('pointercancel', release)
+    button.addEventListener('lostpointercapture', release)
+    button.addEventListener('contextmenu', function(e) { e.preventDefault() })
+}
+function isTouchScreen() {
+    return window.matchMedia('(pointer: coarse)').matches
+}
+
 function update() {
     if (finished) return
     frames++
@@ -318,7 +339,8 @@ function drawWin(c) {
     text(c, 'Все уровни пройдены', 300, 270, '400 20px', '#B8B8B8')
     text(c, 'Время: ' + formatTime(frames), 300, 330, '400 24px', '#2F2F2F')
     text(c, 'Смерти: ' + deaths, 300, 365, '400 24px', '#2F2F2F')
-    text(c, 'Нажмите Enter, чтобы сыграть ещё раз', 300, 440, '400 18px', '#B8B8B8')
+    let restartHint = isTouchScreen() ? 'Коснитесь поля, чтобы сыграть ещё раз' : 'Нажмите Enter, чтобы сыграть ещё раз'
+    text(c, restartHint, 300, 440, '400 20px', '#B8B8B8')
 }
 
 let c, hudLevel, hudDeaths, hudTime
@@ -377,6 +399,10 @@ window.onload = function() {
     hudLevel = document.getElementById('hudLevel')
     hudDeaths = document.getElementById('hudDeaths')
     hudTime = document.getElementById('hudTime')
+    document.querySelectorAll('.TouchButton').forEach(bindTouchButton)
+    c.canvas.onclick = function() {
+        if (finished) startGame()
+    }
     setInterval(function() {
         update()
         draw()
