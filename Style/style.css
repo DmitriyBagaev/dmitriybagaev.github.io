@@ -168,7 +168,23 @@ Button:active {
 
 .gameWrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.GameHud {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    font-size: 18px;
+    color: #2f2f2f;
+}
+
+.GameHint {
+    font-size: 16px;
+    color: #B8B8B8;
 }
 
 @media (max-width: 680px) {
